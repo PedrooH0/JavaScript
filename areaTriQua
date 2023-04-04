@@ -1,0 +1,30 @@
+function Triangulo(base, altura, area) {
+    this.base = base;
+    this.altura = altura;
+    this.area = (base * altura)/2;
+    this.info = function() {
+    console.log('Base: ' + this.base + "\nAltura: " +this.altura + "\nÁrea: " + this.area);
+    };
+ 
+}
+
+function Quadrado(lado) {
+    this.lado = lado;
+    this.area = Math.pow(this.lado, 2);
+    this.info = function() {
+    console.log('Lado: ' + this.lado + "\nÁrea: " + this.area);
+    };
+ 
+}
+
+let esc = prompt("[ 1 ] Triângulo\n[ 2 ] Quadrado\nQual aréa geometrica você deseja calcular: ")
+
+if (esc == 1){
+    let tri = new Triangulo(prompt("Digite a base:"),prompt("Digite a altura:"))
+    tri.info()
+}
+
+if (esc == 2){
+    let quad = new Quadrado(prompt("Digite o valor do lado: "))
+    quad.info()
+}
